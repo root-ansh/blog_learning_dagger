@@ -5,4 +5,5 @@ Honestly i am very dissapointed in the ansh from 2021. this project is about dag
 This project represents:
 1. A basic App which shows list of users/allows modifying/creating some user
 2. a whole mvvm clean architecture
+   3. things left: offline capability,multimodule, different types of api requests
 3. how hilt can be used in various scenarios for providing singleton/multi instances of various stuff

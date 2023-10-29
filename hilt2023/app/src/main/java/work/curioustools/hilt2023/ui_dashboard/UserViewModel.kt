@@ -18,11 +18,12 @@ class UserViewModel @Inject  constructor(
      private val createUserUseCase: CreateUserUseCase,
      private val updateUserUseCase: UpdateUserUseCase,
 ) : ViewModel() {
-
-     val allUsersLiveData:LiveData<ApiResponse<List<UserResponse>>>  = getAllUsersUseCase.responseLiveData
+     private val _allUsersLiveData = getAllUsersUseCase.responseLiveData
+     val allUsersLiveData:LiveData<ApiResponse<List<UserResponse>>>  = _allUsersLiveData
 
 
      fun getAllUsers(){
+          _allUsersLiveData.postValue(ApiResponse.Loading())
           getAllUsersUseCase.requestForData(Unit)
      }
 

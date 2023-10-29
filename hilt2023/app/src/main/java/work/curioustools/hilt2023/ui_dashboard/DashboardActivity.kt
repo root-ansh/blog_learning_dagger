@@ -33,6 +33,11 @@ class DashboardActivity : AppCompatActivity() {
                         log("SUCCESS|${it.page}|${it.perPage}|${it.total}|${it.totalPages}||${it.data}|")
 
                     }
+                    is ApiResponse.Loading -> {}
+
+                    else -> {
+
+                    }
                 }
             }
         }
